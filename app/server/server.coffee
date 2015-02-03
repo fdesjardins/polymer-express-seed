@@ -48,7 +48,7 @@ module.exports = main = (config) ->
   # Session setup
   app.log.info 'init: setting up sessions'
   app.express.use session(
-    name: 'slaterscreens'
+    name: app.config.locals.shortname
     secret: app.config.server.session.secret
     store: new RedisStore(client: app.redis)
     resave: true
