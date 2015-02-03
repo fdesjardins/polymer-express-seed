@@ -1,4 +1,4 @@
-# Polymer Starter Kit
+# Polymer Quickstart
 
 ## Overview
 
