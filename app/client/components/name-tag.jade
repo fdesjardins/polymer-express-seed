@@ -1,0 +1,11 @@
+link(rel="import", href="../bower_components/polymer/polymer.html")
+
+polymer-element(name="name-tag")
+  template
+    :markdown
+      This is **{{owner}}**'s name-tag element.
+    
+  script
+    :coffee
+      Polymer
+        owner: 'Daniel'

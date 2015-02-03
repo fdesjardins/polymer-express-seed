@@ -1,0 +1,39 @@
+doctype html
+html
+  head
+    title polymer-starter
+    
+    meta(name="viewport", content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes")
+      
+    script(src="bower_components/webcomponentsjs/webcomponents.min.js")
+    script(src="scripts/app.js")
+    
+    link(rel="import", href="components/my-element.html")
+    link(rel="import", href="components/proto-element.html")
+    link(rel="import", href="components/ready-element.html")
+    link(rel="import", href="components/name-tag.html")
+    link(rel="import", href="components/fav-color.html")
+    link(rel="import", href="components/age-slider.html")
+    link(rel="import", href="components/color-picker.html")
+    link(rel="import", href="components/editable-color-picker.html")
+      
+    link(rel="stylesheet", href='styles/app.min.css')
+      
+  body
+    my-element
+      
+    proto-element
+      
+    ready-element
+      
+    name-tag
+      
+    fav-color
+    
+    br
+    br
+    age-slider
+      
+    color-picker(owner="Scott", color="blue")
+      
+    editable-color-picker

@@ -1,0 +1,10 @@
+link(rel="import", href="../bower_components/polymer/polymer.html")
+link(rel="import", href="../bower_components/core-ajax/core-ajax.html")
+
+polymer-element(name="my-element" noscript)
+  template
+    span
+      :markdown
+        Hello from **my-element**. This is my Shadow DOM.
+    core-ajax(url="http://swapi.co/api/people/1" auto response="{{resp}}")
+    textarea(value="{{resp}}", style="width: 500px; height: 500px;")

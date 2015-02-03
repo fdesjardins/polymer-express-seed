@@ -1,0 +1,25 @@
+link(rel="import", href="../bower_components/polymer/polymer.html")
+
+polymer-element(name="age-slider")
+  template
+    | This is <b>{{owner}}</b>'s age-slider.
+    | <b>{{name}}</b> lets me borrow it.
+    | He likes the color 
+    span(style="color: {{color}}") {{color}}. 
+    | I am <b>{{age}}</b> years old.
+    p
+      label(for="ageInput", type="range", value="{{age}}")
+      input#ageInput(type="range", value="{{age}}")
+      label(for="nameInput") Name:
+      input#nameInput(value="{{name}}", placeholder="Enter name...")
+        
+  script
+    :coffee
+      Polymer
+        age: 25
+        name: 'Daniel'
+        color: 'red'
+        owner: 'Eric'
+        nameChanged: ->
+          if @name
+            @name = @name[0].toUpperCase() + @name.slice(1)
