@@ -21,6 +21,39 @@ This kit is setup with
 and some other stuff you can remove if you don't need it.
 
 
+## Structure
+
+```
+.
+├── app
+│   ├── client
+│   │   ├── components
+│   │   │   ├── age-slider.jade
+│   │   │   ├── color-picker.jade
+│   │   │   ├── editable-color-picker.jade
+│   │   │   ├── fav-color.jade
+│   │   │   ├── my-element.jade
+│   │   │   ├── name-tag.jade
+│   │   │   ├── proto-element.jade
+│   │   │   └── ready-element.jade
+│   │   ├── images
+│   │   ├── scripts
+│   │   │   └── app.coffee
+│   │   └── styles
+│   │       └── app.styl
+│   └── server
+│       ├── config.coffee
+│       ├── index.jade
+│       ├── secrets-example.coffee
+│       └── server.coffee
+├── bower.json
+├── docs
+├── gulpfile.coffee
+├── LICENSE
+├── package.json
+└── README.md
+```
+
 ## Prerequisites
 
 * Node.js
@@ -29,9 +62,10 @@ and some other stuff you can remove if you don't need it.
 
 ## Getting Started
 
-1. `$ npm i -g gulp && npm i && bower i && cp ./app/server/secrets{-sample.coffee,.coffee} && gulp`
-2. Change the secrets in app/server/secrets.coffee
-2. Modify the code to your liking
+1. Clone the git repo
+2. `$ npm i -g gulp && npm i && bower i && cp ./app/server/secrets{-sample.coffee,.coffee} && gulp`
+3. Change the secrets in app/server/secrets.coffee
+4. Modify the code to your liking
 
 ## Commands
 
