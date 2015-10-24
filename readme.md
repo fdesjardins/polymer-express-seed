@@ -1,14 +1,9 @@
 # Polymer Quickstart
 
-## Overview
+[Polymer in 10 minutes](https://www.polymer-project.org/docs/start/creatingelements.html)
+with some extras so you can quickly dive into Polymer components.
 
-This is basically a working reimplementation of [Polymer in 10 minutes](https://www.polymer-project.org/docs/start/creatingelements.html)
-with some infrastructure so you can quickly dive into Polymer components. It's
-an example of how you might begin to organize an application. You can either
-continue using Jade templates on the server side or add in your favorite
-client-side framework.
-
-This kit is setup with
+This kit is set up with
 
 * Express.js server
 * Gulp
@@ -17,9 +12,25 @@ This kit is setup with
 * Stylus stylesheets
 * LiveReload
 * Redis sessions
+* Bunyan logging
+* Sourcemaps
 
-and some other stuff you can remove if you don't need it.
+and some other stuff you can remove if you don't want it.
 
+## Getting Started
+
+1. `git clone https://github.com/fdesjardins/polymer-express-seed`
+2. `npm install`
+3. `bower install`
+4. `cp ./app/server/secrets{-sample.coffee,.coffee}`
+5. Change the secrets in app/server/secrets.coffee
+6. `gulp`
+7. Open http://localhost:3333/ in your browser
+
+## Gulp
+
+- `gulp build` builds the app
+- `gulp` builds then serves/watches for change using nodemon
 
 ## Structure
 
@@ -27,7 +38,7 @@ and some other stuff you can remove if you don't need it.
 .
 ├── app
 │   ├── client
-│   │   ├── components
+│   │   ├── elements
 │   │   │   ├── age-slider.jade
 │   │   │   ├── color-picker.jade
 │   │   │   ├── editable-color-picker.jade
@@ -53,24 +64,6 @@ and some other stuff you can remove if you don't need it.
 ├── package.json
 └── README.md
 ```
-
-## Prerequisites
-
-* Node.js
-* NPM
-
-
-## Getting Started
-
-1. Clone the git repo
-2. `$ npm i -g gulp && npm i && bower i && cp ./app/server/secrets{-sample.coffee,.coffee} && gulp`
-3. Change the secrets in app/server/secrets.coffee
-4. Modify the code to your liking
-
-## Gulp
-
-- `gulp build` builds the app
-- `gulp` builds then serves/watches for change using nodemon
 
 ## License
 
