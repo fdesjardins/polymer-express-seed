@@ -43,22 +43,22 @@ gulp.task 'images', ->
     .pipe(gulp.dest('./app/public/images'))
     .pipe(plug.size(title: 'images'))
 
-# copy components
-gulp.task 'components', ->
-  gulp.src('./app/client/components/**/*.jade')
+# copy elements
+gulp.task 'elements', ->
+  gulp.src('./app/client/elements/**/*.jade')
     .pipe(plug.plumber(
       errorHandler: plug.notify.onError("Error: <%= error.message %>")
     ))
     .pipe(plug.jade(locals: ('./app/server/config').locals))
-    .pipe(gulp.dest('./app/public/components'))
-    .pipe(plug.size(title: 'components'))
+    .pipe(gulp.dest('./app/public/elements'))
+    .pipe(plug.size(title: 'elements'))
 
 # watch for changes
 gulp.task 'watch', ->
   gulp.watch './app/client/styles/**/*.styl', ['styles']
   gulp.watch './app/client/scripts/**/*.coffee', ['scripts']
   gulp.watch './app/client/images/**/*.*', ['images']
-  gulp.watch './app/client/components/**/*.jade', ['components']
+  gulp.watch './app/client/elements/**/*.jade', ['elements']
 
 # serve task
 gulp.task 'serve', ->
@@ -71,11 +71,11 @@ gulp.task 'serve', ->
   gulp.watch('./app/public/scripts/**').on 'change', plug.livereload.changed
   gulp.watch('./app/public/styles/**').on 'change', plug.livereload.changed
   gulp.watch('./app/public/images/**').on 'change', plug.livereload.changed
-  gulp.watch('./app/public/components/**').on 'change', plug.livereload.changed
+  gulp.watch('./app/public/elements/**').on 'change', plug.livereload.changed
   gulp.watch('./app/index.jade').on 'change', plug.livereload.changed
 
 # build task
-gulp.task 'build', ['styles', 'scripts', 'images', 'components']
+gulp.task 'build', ['styles', 'scripts', 'images', 'elements']
 
 # default task
 gulp.task 'default', ['build', 'watch', 'serve']
