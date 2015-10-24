@@ -67,12 +67,11 @@ and some other stuff you can remove if you don't need it.
 3. Change the secrets in app/server/secrets.coffee
 4. Modify the code to your liking
 
-## Commands
+## Gulp
 
-### `gulp build`
+- `gulp build` builds the app
+- `gulp` builds then serves/watches for change using nodemon
 
-Builds everything.
+## License
 
-### `gulp`
-
-Builds everything, then serves the app using nodemon and watches for changes.
+MIT © Forrest Desjardins
