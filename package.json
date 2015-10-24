@@ -1,7 +1,9 @@
 {
   "name": "polymer-starter",
   "version": "0.0.1",
-  "description": "",
+  "description": "Get started with Polymer",
+  "license": "MIT",
+  "repository": "fdesjardins/polymer-starter",
   "devDependencies": {
     "coffeeify": "^1.0.0",
     "gulp": "^3.8.10",
