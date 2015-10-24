@@ -1,6 +1,6 @@
 {
   "name": "polymer-starter",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "devDependencies": {
     "coffeeify": "^1.0.0",
