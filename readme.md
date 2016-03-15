@@ -3,7 +3,7 @@
 [Polymer in 10 minutes](https://www.polymer-project.org/docs/start/creatingelements.html)
 with some extras so you can quickly dive into Polymer components.
 
-This kit is set up with
+## Contains
 
 * Express.js server
 * Gulp
@@ -14,8 +14,6 @@ This kit is set up with
 * Redis sessions
 * Bunyan logging
 * Sourcemaps
-
-and some other stuff you can remove if you don't want it.
 
 ## Getting Started
 
