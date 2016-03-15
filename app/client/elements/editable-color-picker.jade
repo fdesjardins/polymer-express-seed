@@ -9,15 +9,20 @@ dom-module(id="editable-color-picker", attributes="owner color")
     input#nameInput(is="iron-input", bind-value="{{owner}}", placeholder="Your name here...")
   
   script
-    :coffee
-      Polymer
-        is: 'editable-color-picker'
-        properties:
-          color: 
-            type: String
+    :babel
+      Polymer({
+        is: 'editable-color-picker',
+        properties: {
+          color: {
+            type: String,
             value: 'red'
-          owner: 
-            type: String
+          },
+          owner: {
+            type: String,
             value: 'Daniel'
-        setFocus: ->
-          @$.nameInput.focus()
+          }
+        },
+        setFocus: function () {
+          this.$.nameInput.focus();
+        }
+      })

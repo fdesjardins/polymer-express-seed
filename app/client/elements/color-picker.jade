@@ -6,13 +6,17 @@ dom-module(id="color-picker", attributes="owner color")
     | He likes the color <b style="color: {{color}}">{{color}}<b>.
   
   script
-    :coffee
-      Polymer
-        is: 'color-picker'
-        properties:
-          color: 
-            type: String
+    :babel
+      Polymer({
+        is: 'color-picker',
+        properties: {
+          color: {
+            type: String,
             value: 'red'
-          owner: 
-            type: String
+          },
+          owner: {
+            type: String,
             value: 'Daniel'
+          }
+        }
+      })

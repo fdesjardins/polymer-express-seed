@@ -5,9 +5,9 @@ with some extras so you can quickly dive into Polymer components.
 
 ## Contains
 
-* Express.js server
+* Express.js
 * Gulp
-* CoffeeScript
+* Babel
 * Jade templates
 * Stylus stylesheets
 * LiveReload
@@ -47,17 +47,17 @@ with some extras so you can quickly dive into Polymer components.
 │   │   │   └── ready-element.jade
 │   │   ├── images
 │   │   ├── scripts
-│   │   │   └── app.coffee
+│   │   │   └── app.js
 │   │   └── styles
 │   │       └── app.styl
 │   └── server
-│       ├── config.coffee
+│       ├── config.js
 │       ├── index.jade
-│       ├── secrets-example.coffee
-│       └── server.coffee
+│       ├── secrets-example.js
+│       └── server.js
 ├── bower.json
 ├── docs
-├── gulpfile.coffee
+├── gulpfile.js
 ├── LICENSE
 ├── package.json
 └── README.md

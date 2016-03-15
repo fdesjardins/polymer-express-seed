@@ -1,6 +1,10 @@
-module.exports = secrets =
-  server:
-    session:
+module.exports = {
+  server: {
+    session: {
       secret: 'youresouglyyoucouldbeamodernartmasterpiece'
-    cookie:
+    },
+    cookie: {
       secret: 'barktwiceifyoureinmilwaukee'
+    }
+  }
+};

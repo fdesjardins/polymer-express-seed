@@ -6,10 +6,13 @@ dom-module(id="name-tag")
       This is **{{owner}}**'s name-tag element.
     
   script
-    :coffee
-      Polymer
-        is: 'name-tag'
-        properties:
-          owner: 
-            type: String
+    :babel
+      Polymer({
+        is: 'name-tag',
+        properties: {
+          owner: {
+            type: String,
             value: 'Daniel'
+          }
+        }
+      })

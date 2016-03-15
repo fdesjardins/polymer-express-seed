@@ -15,22 +15,30 @@ dom-module(id="age-slider")
       input#nameInput(is="iron-input", bind-value="{{name}}", placeholder="Enter name...")
         
   script
-    :coffee
-      Polymer
-        is: 'age-slider'
-        properties:
-          age: 
-            type: Number
+    :babel
+      Polymer({
+        is: 'age-slider',
+        properties: {
+          age: {
+            type: Number,
             value: 25
-          name: 
-            type: String
+          },
+          name: {
+            type: String,
             value: 'Daniel'
-          color: 
-            type: String
+          },
+          color: {
+            type: String,
             value: 'red'
-          owner: 
-            type: String
+          },
+          owner: {
+            type: String,
             value: 'Eric'
-        nameChanged: ->
-          if @name
-            @name = @name[0].toUpperCase() + @name.slice(1)
+          }
+        },
+        nameChanged: () => {
+          if (this.name) {
+            this.name = this.name[0].toUpperCase() + this.name.slice(1);
+          }
+        }
+      })

@@ -6,13 +6,17 @@ dom-module(id="fav-color")
     span(style="color: {{color}}") {{color}}.
   
   script
-    :coffee
-      Polymer
-        is: 'fav-color'
-        properties:
-          owner: 
-            type: String
+    :babel
+      Polymer({
+        is: 'fav-color',
+        properties: {
+          owner: {
+            type: String,
             value: 'Daniel'
-          color: 
-            types: String
+          },
+          color: {
+            types: String,
             value: 'red'
+          }
+        }
+      })

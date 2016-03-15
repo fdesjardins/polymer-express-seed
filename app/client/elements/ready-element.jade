@@ -6,12 +6,15 @@ dom-module(id="ready-element")
     span(id="el") Not ready...
     
   script
-    :coffee
-      Polymer
-        is: 'ready-element'
-        properties:
-          type: String
+    :babel
+      Polymer({
+        is: 'ready-element',
+        properties: {
+          type: String,
           owner: 'Daniel'
-        ready: ->
-          @$.el.textContent = "#{@properties.owner} is ready!"
+        },
+        ready: function () {
+          this.$.el.textContent = `${this.properties.owner} is ready!`;
+        }
+      })
     
