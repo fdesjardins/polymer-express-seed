@@ -1,6 +1,6 @@
 link(rel="import", href="../bower_components/polymer/polymer.html")
   
-polymer-element(name="proto-element")
+dom-module(id="proto-element")
   template
     span
       :markdown
@@ -9,4 +9,5 @@ polymer-element(name="proto-element")
   script
     :coffee
       Polymer
+        is: 'proto-element'
         ready: -> console.log 'proto-element: ready'

@@ -1,6 +1,6 @@
 link(rel="import", href="../bower_components/polymer/polymer.html")
 
-polymer-element(name="fav-color")
+dom-module(id="fav-color")
   template
     | This is <b>{{owner}}</b>'s fav-color element. {{owner}} likes the color 
     span(style="color: {{color}}") {{color}}.
@@ -8,5 +8,11 @@ polymer-element(name="fav-color")
   script
     :coffee
       Polymer
-        owner: 'Daniel'
-        color: 'red'
+        is: 'fav-color'
+        properties:
+          owner: 
+            type: String
+            value: 'Daniel'
+          color: 
+            types: String
+            value: 'red'

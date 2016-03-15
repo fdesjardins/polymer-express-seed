@@ -1,6 +1,6 @@
 link(rel="import", href="../bower_components/polymer/polymer.html")
 
-polymer-element(name="name-tag")
+dom-module(id="name-tag")
   template
     :markdown
       This is **{{owner}}**'s name-tag element.
@@ -8,4 +8,8 @@ polymer-element(name="name-tag")
   script
     :coffee
       Polymer
-        owner: 'Daniel'
+        is: 'name-tag'
+        properties:
+          owner: 
+            type: String
+            value: 'Daniel'

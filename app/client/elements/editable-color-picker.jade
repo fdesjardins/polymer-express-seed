@@ -1,17 +1,23 @@
 link(rel="import", href="../bower_components/polymer/polymer.html")
   
-polymer-element(name="editable-color-picker", attributes="owner color")
+dom-module(id="editable-color-picker", attributes="owner color")
   template
     p.
       This is <strong>{{owner}}</strong>'s editable-color-picker. 
       He likes the color <b style="color: {{color}}">{{color}}<b>.
-    button(on-click="{{setFocus}}") Set focus to text input
-    input#nameInput(value="{{owner}}", placeholder="Your name here...")
+    button(on-tap="setFocus") Set focus to text input
+    input#nameInput(is="iron-input", bind-value="{{owner}}", placeholder="Your name here...")
   
   script
     :coffee
       Polymer
-        color: 'red'
-        owner: 'Daniel'
+        is: 'editable-color-picker'
+        properties:
+          color: 
+            type: String
+            value: 'red'
+          owner: 
+            type: String
+            value: 'Daniel'
         setFocus: ->
           @$.nameInput.focus()

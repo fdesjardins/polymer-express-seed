@@ -1,6 +1,6 @@
 link(rel="import", href="../bower_components/polymer/polymer.html")
   
-polymer-element(name="color-picker", attributes="owner color")
+dom-module(id="color-picker", attributes="owner color")
   template
     | This is <strong>{{owner}}</strong>'s color-picker. 
     | He likes the color <b style="color: {{color}}">{{color}}<b>.
@@ -8,5 +8,11 @@ polymer-element(name="color-picker", attributes="owner color")
   script
     :coffee
       Polymer
-        color: 'red'
-        owner: 'Daniel'
+        is: 'color-picker'
+        properties:
+          color: 
+            type: String
+            value: 'red'
+          owner: 
+            type: String
+            value: 'Daniel'

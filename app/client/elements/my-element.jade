@@ -1,10 +1,17 @@
 link(rel="import", href="../bower_components/polymer/polymer.html")
-link(rel="import", href="../bower_components/core-ajax/core-ajax.html")
+link(rel="import", href="../bower_components/iron-ajax/iron-ajax.html")
 
-polymer-element(name="my-element" noscript)
+dom-module(id="my-element")
   template
     span
       :markdown
         Hello from **my-element**. This is my Shadow DOM.
-    core-ajax(url="http://swapi.co/api/people/1" auto response="{{resp}}")
-    textarea(value="{{resp}}", style="width: 500px; height: 500px;")
+    iron-ajax(url="http://swapi.co/api/people/1" auto last-response="{{response}}")
+    textarea(value="{{displayResponse(response)}}", style="width: 500px; height: 500px;")
+  
+  script
+    :coffee
+      Polymer
+        is: 'my-element'
+        displayResponse: (response) ->
+          JSON.stringify(response, null, 2)
