@@ -1,4 +1,4 @@
-# Polymer Quickstart
+# Polymer Express Seed
 
 [Polymer in 10 minutes](https://www.polymer-project.org/docs/start/creatingelements.html)
 with some extras so you can quickly dive into Polymer components.
@@ -17,13 +17,13 @@ with some extras so you can quickly dive into Polymer components.
 
 ## Getting Started
 
-1. `git clone https://github.com/fdesjardins/polymer-express-seed`
-2. `npm install`
-3. `bower install`
-4. `cp ./app/server/secrets{-sample.coffee,.coffee}`
-5. Change the secrets in app/server/secrets.coffee
-6. `gulp`
-7. Open http://localhost:3333/ in your browser
+1. `$ git clone https://github.com/fdesjardins/polymer-express-seed`
+2. `$ npm install`
+3. `$ bower install`
+4. `$ cp ./app/server/secrets{-sample.coffee,.coffee}`
+5. Change the secrets in `app/server/secrets.coffee`
+6. `$ gulp`
+7. Open `http://localhost:3333/` in your browser
 
 ## Gulp
 
