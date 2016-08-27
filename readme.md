@@ -1,8 +1,5 @@
 # Polymer Express Seed
 
-[Polymer in 10 minutes](https://www.polymer-project.org/docs/start/creatingelements.html)
-with some extras so you can quickly dive into Polymer components.
-
 ## Contains
 
 * Express.js
